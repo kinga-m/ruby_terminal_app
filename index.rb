@@ -5,8 +5,11 @@ def read_int
         input = gets.chomp
     end
     input.to_i
+end
 
-    
+def quit
+    puts "goodbye"
+end
 
 def main_menu
     puts "Welcome to the quiz"
