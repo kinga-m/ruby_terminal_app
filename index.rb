@@ -11,6 +11,14 @@ def quit
     puts "goodbye"
 end
 
+def start_quiz(max_questions)
+    question_pool = [
+        {type: :multiple_choice, content: {options: ["toyota", "suziki", "holden", "mazda", "nissan"]}, correct_answer: 1, text: "What brand does the model corolla belongs to?"}, 
+        {type: :raw, content: nil, correct_answer: ["toyota"], text: "What brand does the model corolla belongs to?"},
+        {type: :raw, content: nil, correct_answer: ["toyota"], text: "What brand does the model corolla belongs to?"},
+    ]
+    
+
 def main_menu
     puts "Welcome to the quiz"
     puts "short quiz[1]"
