@@ -1,3 +1,13 @@
+def read_int
+    input = gets.chomp
+    while input !~ /[0-9]+/
+        puts "invalid input! please enter a number"
+        input = gets.chomp
+    end
+    input.to_i
+
+    
+
 def main_menu
     puts "Welcome to the quiz"
     puts "short quiz[1]"
