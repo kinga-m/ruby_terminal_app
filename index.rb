@@ -14,7 +14,7 @@ end
 
 def start_quiz(max_questions)
     question_pool = [
-        {type: :multiple_choice, content: {options: ["toyota", "vowlswagon", "holden", "mazda", "nissan"]}, correct_answer: 1, text: "What brand does the model corolla belongs to?"}, 
+        {type: :multiple_choice, content: {options: ["toyota", "vowlswagon", "holden", "mazda", "nissan"]}, correct_answer: 0, text: "What brand does the model corolla belongs to?"}, 
         {type: :raw, content: nil, correct_answer: ["toyota"], text: "What brand does the model corolla belongs to?"},
         {type: :raw, content: nil, correct_answer: ["toyota"], text: "What brand does the model corolla belongs to?"},
     ]
@@ -40,6 +40,12 @@ def start_quiz(max_questions)
     [score, questions.size]
 end
 
+def show_results(score, num_questions)
+    percentage = (score.to_f / num_questions.to_f * 100).to_i
+    puts "your score is #{percentage}"
+    
+end
+
 while true
     puts "Welcome to the quiz"
     puts "short quiz[1]"
@@ -50,11 +56,11 @@ while true
 
     case menu_input
     when 1
-        puts "start quiz(1)"
+        show_results(*start_quiz(1))
     when 2
-        puts "start_quiz(2)"
+        show_results(*start_quiz(2))
     when 3
-        puts "start_quiz(3)"
+        show_results(*start_quiz(3))
     when 4
         puts "Are you sure, type 'yes' to quit"
         quit_choice = gets.chomp
