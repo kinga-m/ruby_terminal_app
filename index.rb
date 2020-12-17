@@ -1,3 +1,5 @@
+require_relative('methods')
+require 'colorize'
 
 
 while true
