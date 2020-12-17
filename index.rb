@@ -14,9 +14,13 @@ end
 
 def start_quiz(max_questions)
     question_pool = [
-        {type: :multiple_choice, content: {options: ["toyota", "vowlswagon", "holden", "mazda", "nissan"]}, correct_answer: 0, text: "What brand does the model corolla belongs to?"}, 
-        {type: :raw, content: nil, correct_answer: ["toyota"], text: "What brand does the model corolla belongs to?"},
-        {type: :raw, content: nil, correct_answer: ["toyota"], text: "What brand does the model corolla belongs to?"},
+        {type: :multiple_choice, content: {options: ["toyota", "volkswagen", "holden", "mazda", "nissan"]}, correct_answer: 0, text: "What brand does the model corolla belongs to?"}, 
+        # {type: :raw, content: nil, correct_answer: ["toyota"], text: "What brand does the model corolla belongs to?"},
+        # {type: :raw, content: nil, correct_answer: ["toyota"], text: "What brand does the model corolla belongs to?"},
+        {type: :raw, content: nil, correct_answer: ["mazda"], text: "What brand does the model CX5 belongs to?"},
+        {type: :raw, content: nil, correct_answer: ["nissan"], text: "What brand does the model Quasqai belongs to?"},
+        {type: :raw, content: nil, correct_answer: ["holden"], text: "What brand does the model Astra belongs to?"},
+        {type: :raw, content: nil, correct_answer: ["volkswagen"], text: "What brand does the model polo GTI belongs to?"},
     ]
     questions = question_pool.shuffle[0..max_questions-1]
     score = 0
