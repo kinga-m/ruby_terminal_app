@@ -1,6 +1,6 @@
 require_relative 'methods'
 require 'colorize'
-require_relative 'errors'
+# require_relative 'errors'
 
 if ARGV.length > 0
     flag, *rest = ARGV
@@ -22,6 +22,18 @@ if ARGV.length > 0
 end
 
 while true
+    puts " 
+    
+            ________    _       _     ________    ________
+           | ______ |  | |     | |   |__   ___|  |__   __|
+           | |    | |  | |     | |      | |         / /        
+           | |    | |  | |     | |      | |        / /          
+           | |____| |  | |_____| |   ___| |___    / /____            
+           |_______ |  |_________|  |_________|  |_______|
+                  |_|
+           
+           "
+
     puts "Welcome to the quiz"
     puts "short quiz[1]"
     puts "medium quiz[2]"
