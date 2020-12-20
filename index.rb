@@ -1,5 +1,6 @@
-require_relative('methods')
+require_relative 'methods'
 require 'colorize'
+require_relative 'errors'
 
 if ARGV.length > 0
     flag, *rest = ARGV
@@ -45,6 +46,7 @@ while true
     puts "press any key to continue"
     gets 
     system "clear"
-end
 
+    puts "Something went wrong"
+end
 puts "Goodbye"
