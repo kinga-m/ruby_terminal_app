@@ -1,6 +1,24 @@
 require_relative('methods')
 require 'colorize'
 
+if ARGV.length > 0
+    flag, *rest = ARGV
+    ARGV.clear
+    case flag
+    when '-help'
+        puts "Read the readme"
+        exit
+    when '-path'
+        puts rest[0]
+        exit
+    when '-info'
+        puts "This program is using Ruby version: #{RUBY_VERSION}"
+        exit
+    else
+        puts "invalid argument"
+        exit
+    end
+end
 
 while true
     puts "Welcome to the quiz"
