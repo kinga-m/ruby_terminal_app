@@ -18,7 +18,7 @@ def start_quiz(max_questions)
         {type: :raw, content: nil, correct_answer: ["mazda"], text: "What brand does the model CX5 belongs to?".red},
         {type: :raw, content: nil, correct_answer: ["nissan"], text: "What brand does the model Quasqai belongs to?".yellow},
         {type: :raw, content: nil, correct_answer: ["holden"], text: "What brand does the model Astra belongs to?".green},
-        {type: :raw, content: nil, correct_answer: ["volkswagen"], text: "What brand does the model polo GTI belongs to?".blue},
+        {type: :raw, content: nil, correct_answer: ["volkswagen"], text: "What brand does the model polo GTI belongs to?"},
     ]
     questions = question_pool.shuffle[0..max_questions-1]
     score = 0
