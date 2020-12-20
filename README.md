@@ -11,3 +11,6 @@ gem install colorize
 
 ### running the app
 bash script runner.sh included
+### argument
+'-help' - display help info
+'-info' - display program info
